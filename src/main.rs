@@ -7,36 +7,25 @@ use dialoguer::{Input, MultiSelect};
 use indicatif::{ProgressBar, ProgressStyle};
 
 fn main() {
-    println!("\nWelcome to Video Downloader 🎬");
+    println!("\n\nWelcome to Video Downloader");
 
     let mut downloads = Vec::new();
     let format_options = vec!["mp4", "mp3", "webm"];
 
-    loop {
-        let url_input: String = Input::new()
+    let url_input: String = Input::new()
             .with_prompt("Enter video URL (or press ENTER to finish)")
             .allow_empty(true)
             .interact_text()
             .unwrap();
 
-        if url_input.trim().is_empty() {
-            break;
-        }
-
-        let selections = MultiSelect::new()
+    let selections = MultiSelect::new()
             .with_prompt("Select one or more formats")
             .items(&format_options)
             .interact()
             .unwrap();
 
-        if selections.is_empty() {
-            println!("No format selected. Skipping this URL.");
-            continue;
-        }
-
-        for i in selections {
-            downloads.push((url_input.clone(), format_options[i].to_string()));
-        }
+    for i in selections {
+        downloads.push((url_input.clone(), format_options[i].to_string()));
     }
 
     if downloads.is_empty() {

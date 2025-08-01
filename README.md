@@ -1,15 +1,14 @@
-# 🎬 Rust Social Video Downloader CLI
+# Rust Social Video Downloader CLI
 
-## ✨ Features
+## Features
 
 - ✅ Download from any URL supported by yt-dlp (YouTube, TikTok, Twitter, etc.)
--- Checkout supported sites here: `https://github.com/yt-dlp/yt-dlp/blob/master/supportedsites.md`
 - ✅ Select multiple formats per video (`mp3`, `mp4`, `webm`)
 - ✅ Interactive command-line prompts
 
 ---
 
-## 🛠 Requirements
+## Requirements
 
 Make sure the following tools are installed on your system:
 
@@ -46,7 +45,7 @@ sudo mv yt-dlp /usr/local/bin/
 
 ---
 
-### 🎞 3. FFmpeg
+### 3. FFmpeg
 
 Required for format conversion (`mp3`, `mp4`, etc.).
 
@@ -64,7 +63,7 @@ brew install ffmpeg
 
 ---
 
-## 🚀 How to Run
+## How to Run
 
 1. **Clone or download the project**
 
@@ -84,10 +83,13 @@ cargo run
 Example terminal session:
 
 ```
-Enter video URL: https://www.youtube.com/watch?v=abcd1234
-Enter format(s) for this URL (e.g. mp4,mp3)
-Enter video URL: 
-Enter output directory (default: ./downloads):
+Welcome to Video Downloader 
+Enter video URL (or press ENTER to finish): {Paste URL here}
+Select one or more formats:
+> [ ] mp4
+  [ ] mp3
+  [ ] webm
+{click Space button to choose format}
 ```
 
 Done! Your downloads will be saved in the selected folder.
@@ -100,11 +102,8 @@ This tool is beginner-friendly and designed for hacking and extension.
 
 Ideas for new features:
 
-* [ ] Load multiple URLs from `.txt` file
-* [ ] Download video thumbnail and metadata
-* [ ] Save a log of downloads
-* [ ] Display video title before downloading
-* [ ] Parallel downloads with threads
-* [ ] more...
+* [ ] Ask for another URL
+* [ ]
+* [ ] 
 
 Feel free to fork, PR, or suggest ideas!
